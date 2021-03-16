@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="edi.749.1" system="EDI" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <shortName>CVPIA Salmonid Habitat Monitoring Data</shortName>
+    <title>Salmonid habitat use monitoring used to determine effectiveness of habitat improvement projects in the Sacramento River, CA</title>
+    <creator id="https://orcid.org/0000-0002-6225-2057">
+      <individualName>
+        <givenName>Amanda</givenName>
+        <surName>Banet</surName>
+      </individualName>
+      <organizationName>CSU Chico</organizationName>
+      <electronicMailAddress>abanet@csuchico edu</electronicMailAddress>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>John</givenName>
+        <surName>Hannon</surName>
+      </individualName>
+      <organizationName>US Bureau of Reclamation</organizationName>
+      <electronicMailAddress>jhannon@usbr.gov</electronicMailAddress>
+      <role>program founder</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Steve</givenName>
+        <surName>Tussing</surName>
+      </individualName>
+      <organizationName>Tussing Ecological Services</organizationName>
+      <electronicMailAddress>sptussing@earthlink.net</electronicMailAddress>
+      <role>other</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Ryan</givenName>
+        <surName>Greathouse</surName>
+      </individualName>
+      <organizationName>PSMFC</organizationName>
+      <electronicMailAddress>rgreathouse@psmfc.org</electronicMailAddress>
+      <role>other</role>
+    </associatedParty>
+    <pubDate>2021-03-16</pubDate>
+    <abstract>
+      <para>
+    The Central Valley Project Improvement Act (CVPIA) funds habitat
+    improvement work in the Central Valley of California to increase
+    salmonid populations in furtherance of meeting CVPIA fish doubling
+    goals. This dataset covers enclosure studies that examined salmonid
+    growth rates in the Sacramento River and focused on assessing
+    effectiveness of salmonid habitat improvement projects. Data was
+    collected in July and August 2019 from project sites, constructed
+    habitat project sites, and control sites where no treatment is
+    planned. Six enclosures with juvenile Fall Run Chinook salmon from
+    Coleman National Fish Hatchery were placed in each habitat type.
+    Fish growth was tracked for approximately 6.5 weeks. Annual reports
+    summarize the survey findings.
+  </para>
+    </abstract>
+    <keywordSet>
+      <keyword>Sacramento River</keyword>
+      <keyword>Salmonid Habitat Restoration Projects</keyword>
+      <keyword>Effectiveness Monitoring</keyword>
+      <keyword>Pacific Salmon</keyword>
+    </keywordSet>
+    <intellectualRights>
+      <para>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on the website https://portal.edirepository.org (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.&amp;#13;</para>
+    </intellectualRights>
+    <licensed>
+      <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+      <url>https://spdx.org/licenses/CC0-1.0.html</url>
+      <identifier>CC0-1.0</identifier>
+    </licensed>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Sacramento Riverin northern California in the reach of the river between Keswick Dam and Sacramento</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-122.4482</westBoundingCoordinate>
+          <eastBoundingCoordinate>-121.4844</eastBoundingCoordinate>
+          <northBoundingCoordinate>40.6124</northBoundingCoordinate>
+          <southBoundingCoordinate>38.5094</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2015-12-08</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2020-07-02</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Animalia</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>phylum</taxonRankName>
+            <taxonRankValue>Chordata</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>class</taxonRankName>
+              <taxonRankValue>Teleostei</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>order</taxonRankName>
+                <taxonRankValue>Salmoniformes</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                  <taxonRankValue>Salmonidae</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>genus</taxonRankName>
+                    <taxonRankValue>Oncorhynchus</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>species</taxonRankName>
+                      <taxonRankValue>Oncorhynchus tshawytscha</taxonRankValue>
+                      <commonName>Chinook Salmon</commonName>
+                      <taxonId provider="https://itis.gov"/>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Animalia</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>phylum</taxonRankName>
+            <taxonRankValue>Chordata</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>class</taxonRankName>
+              <taxonRankValue>Teleostei</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>order</taxonRankName>
+                <taxonRankValue>Salmoniformes</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                  <taxonRankValue>Salmonidae</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>genus</taxonRankName>
+                    <taxonRankValue>Oncorhynchus</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>species</taxonRankName>
+                      <taxonRankValue>Oncorhynchus mykiss</taxonRankValue>
+                      <commonName>Steelhead Trout</commonName>
+                      <taxonId provider="https://itis.gov"/>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <maintenance>
+      <description>ongoing</description>
+      <maintenanceUpdateFrequency>annually</maintenanceUpdateFrequency>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Amanda</givenName>
+        <surName>Banet</surName>
+      </individualName>
+      <organizationName>CSU Chico</organizationName>
+      <electronicMailAddress>abanet@csuchico edu</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Enclosure Study: Growth Rate Methods.</title>
+            <para>
+      Data was collected following methods described at the following
+      link:
+    </para>
+            <para>
+              <ulink>"https://www.sacramentoriver.org/forum/publications/side_channels/Monitoring%20Plan%20(final)%20170831.pdf"</ulink>
+            </para>
+            <para>
+      Monitoring efforts will generate data for the presented response
+      variables for the purpose of testing the hypotheses presented in
+      table 1 of the aforementioned document. Specific response variable
+      metrics are identified while methods reference field protocols
+      that are documented in Appendix A (Table A-1).
+    </para>
+            <para>
+      Note that the above referenced protocol includes additional types
+      of data collection. Enclosure study methods are identified and
+      clearly labeled throughout the document.
+    </para>
+            <para>
+      Caveats to using this data: Some enclosures lost fish due to
+      mortality or escape, and others did not. This resulted in
+      different densities between habitat types, and confounded habitat
+      type with density dependent effects on growth. Logistical
+      constraints prevented removal of all enclosures on the same day,
+      so the total time from start to finish was not identical between
+      habitat types.
+    </para>
+          </section>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>CVPIA Salmonid Monitoring Habitat Project</title>
+      <personnel>
+        <individualName>
+          <givenName>Amanda</givenName>
+          <surName>Banet</surName>
+        </individualName>
+        <organizationName>CSU Chico</organizationName>
+        <electronicMailAddress>abanet@csuchico edu</electronicMailAddress>
+        <role>Project Lead</role>
+      </personnel>
+      <award>
+        <funderName>Bureau of Reclamation</funderName>
+        <funderIdentifier>TBD</funderIdentifier>
+        <title>Salmonid Spawning and Rearing Habitat Restoration in the Sacramento River</title>
+      </award>
+    </project>
+    <dataTable>
+      <entityName>enclosure-study-growth-rate-data.csv</entityName>
+      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <physical>
+        <objectName>enclosure-study-growth-rate-data.csv</objectName>
+        <size unit="bytes">32616</size>
+        <authentication method="MD5">02b90d65da8c77cffcb380dc778351da</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download"/>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>enclosure</attributeName>
+          <attributeDefinition>Enclosure ID. Enclosures were number 1-6 in each site for identification.</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Enclosure ID. Enclosures were number 1-6 in each site for identification.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>fish_code</attributeName>
+          <attributeDefinition>Unique identifying number for fish within an enclosure. Fish were numbered 1-20 within each enclosure.</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique identifying number for fish within an enclosure. Fish were numbered 1-20 within each enclosure.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>length_begin</attributeName>
+          <attributeDefinition>fish fork length at the start of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">48</minimum>
+                  <maximum exclusive="false">78</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>length_middle</attributeName>
+          <attributeDefinition>fish fork length at the mid-point of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">68</minimum>
+                  <maximum exclusive="false">84</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>length_end</attributeName>
+          <attributeDefinition>fish fork length at the end of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">65</minimum>
+                  <maximum exclusive="false">95</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>condition_beginning</attributeName>
+          <attributeDefinition>Fulton's condition factor at the beginning of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.335</minimum>
+                  <maximum exclusive="false">2.7003</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>condition_ending</attributeName>
+          <attributeDefinition>Fulton's condition factor at the end of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.7328</minimum>
+                  <maximum exclusive="false">1.591</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>density_start</attributeName>
+          <attributeDefinition>density at the start of the study, represented as the number of fish in the enclosure</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>fishPerEnclosure</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">18</minimum>
+                  <maximum exclusive="false">20</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>density_middle</attributeName>
+          <attributeDefinition>density at the mid-point of the study, represented as the number of fish in the enclosure</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>fishPerEnclosure</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">11</minimum>
+                  <maximum exclusive="false">20</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>density_end</attributeName>
+          <attributeDefinition>density at the end of the study, represented as the number of fish in the enclosure</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>fishPerEnclosure</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">5</minimum>
+                  <maximum exclusive="false">20</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>atu</attributeName>
+          <attributeDefinition>acumulated thermal units experienced by the fish over the course of the study</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>thermal unit</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">593.193</minimum>
+                  <maximum exclusive="false">628.55</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>habitat</attributeName>
+          <attributeDefinition>The habitat type (mainstem/sidechannel) and treatment (control/restored) for each study site</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The habitat type (mainstem/sidechannel) and treatment (control/restored) for each study site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>site_id</attributeName>
+          <attributeDefinition>site name for each study site</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>site name for each study site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>days</attributeName>
+          <attributeDefinition>number of days fish were in enclosure</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>day</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">43</minimum>
+                  <maximum exclusive="false">48</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="fishPerEnclosure" name="fishPerEnclosure" unitType="density">
+          <description>Fish density in the enclosure, number of fish in total enclosure space</description>
+        </unit>
+        <unit id="thermal unit" name="thermal unit" unitType="temperature">
+          <description>thermal unit of energy given off of fish</description>
+        </unit>
+        <unit id="day" name="day" unitType="dimensionless">
+          <description>count of number of days that go by</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
