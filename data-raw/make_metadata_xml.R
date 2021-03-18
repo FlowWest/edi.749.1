@@ -18,10 +18,24 @@ methods_docx <- "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Gr
 
 dataset_file_name <- "enclosure-study-growth-rate-data.csv"
 # dO ALL DATASETS
-dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-data.csv"), 
-                               datatable_name = c("enclosure-study-growth-rate-data.csv"), 
-
-                               attribute_info = c("data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-metadata.xlsx"))
+dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-data.csv",
+                                              "data/enclosure-study-gut-contents-data.csv",
+                                              "data/microhabitat-use-data-2018-2020.csv",
+                                              "data/seining-weight-lengths-2018-2020.csv",
+                                              "data/snorkel-index-data-2015-2020.csv"
+), 
+                               datatable_name = c("enclosure-study-growth-rate-data.csv",
+                                                  "enclosure-study-gut-contents-data.csv",
+                                                  "microhabitat-use-data-2018-2020.csv",
+                                                  "seining-weight-lengths-2018-2020.csv",
+                                                  "snorkel-index-data-2015-2020.csv"
+), 
+                               attribute_info = c("data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-metadata.xlsx",
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Gut Contents/enclosure-study-gut-contents-metadata.xlsx",
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Microhabitat Use Data/microhabitat-use-metadata.xlsx",
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Seining Data/seining-weight-length-metadata.xlsx",
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"
+))
 
 # EDI number -------------------------------------------------------------------
 edi_number = "edi.749.1"
@@ -93,7 +107,7 @@ coverage <- add_coverage(list(),
 
 ### Add DataTable or SpatialRaster or SpatialVector ----------------------------
 #### Add Physical --------------------------------------------------------------
-physical <- add_physical(file_path = dataset_file, data_url = NULL)
+#physical <- add_physical(file_path = dataset_file, data_url = NULL)
 
 
 #### Add data tables -----------------------------------------------------------
@@ -139,13 +153,14 @@ data_tables <- purrr::pmap(dataset_files, adds_datatable)
 
 # Adding additional metadata with custom units
 # TODO make a function to take care of cutom units
-custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day"),
-                           unitType = c("density", "temperature", "dimensionless"),
-                           parentSI = c(NA, NA, NA, NA, NA, NA),
-                           multiplierToSI = c(NA, NA, NA, NA, NA, NA),
+custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day", "fishPerSchool"),
+                           unitType = c("density", "temperature", "dimensionless", "density"),
+                           parentSI = c(NA, NA, NA, NA, NA),
+                           multiplierToSI = c(NA, NA, NA, NA, NA),
                            description = c("Fish density in the enclosure, number of fish in total enclosure space", 
                                            "thermal unit of energy given off of fish",
-                                           "count of number of days that go by"))
+                                           "count of number of days that go by",
+                                           "Number of fish counted per school"))
 
 unitList <- set_unitList(custom_units)
 
