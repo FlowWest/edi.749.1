@@ -13,10 +13,10 @@ metadata <- lapply(sheets, function(x) readxl::read_excel(excel_path, sheet = x)
 names(metadata) <- sheets
 
 abstract_docx <- "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-abstract.docx"
-methods_docx <- "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-methods.docx"
-#dataset_file <- "data-raw/metadata_complete/ARIS_ALAN.csv"
+methods_docx <- "data-raw/mandy-salmanid-habitat-monitoring/methods.md"
+# dataset_file <- "data-raw/metadata_complete/ARIS_ALAN.csv"
 
-dataset_file_name <- "enclosure-study-growth-rate-data.csv"
+# dataset_file_name <- "enclosure-study-growth-rate-data.csv"
 # dO ALL DATASETS
 dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-data.csv",
                                               "data/enclosure-study-gut-contents-data.csv",
@@ -36,6 +36,8 @@ dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Seining Data/seining-weight-length-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"
 ))
+
+shp_file <- "data-raw/mandy-salmanid-habitat-monitoring/20200115SacFishPositionsShapefile.zip"
 
 # EDI number -------------------------------------------------------------------
 edi_number = "edi.749.1"
@@ -106,10 +108,6 @@ coverage <- add_coverage(list(),
                          taxonomic_coverage = taxonomic_coverage)
 
 ### Add DataTable or SpatialRaster or SpatialVector ----------------------------
-#### Add Physical --------------------------------------------------------------
-#physical <- add_physical(file_path = dataset_file, data_url = NULL)
-
-
 #### Add data tables -----------------------------------------------------------
 # Create helper function to add code definitions if domain is "enumerated"
 adds_datatable <- function(datatable, datatable_name, attribute_info, dataset_methods = NULL, additional_info = NULL){
@@ -151,12 +149,19 @@ adds_datatable <- function(datatable, datatable_name, attribute_info, dataset_me
 }
 data_tables <- purrr::pmap(dataset_files, adds_datatable)
 
-# Adding additional metadata with custom units
+# Adds shp zip folder as other entity ------------------------------------------
+physical <- add_physical(file_path = shp_file, data_url = NULL)
+otherEntity <- list(entityName = "20200115SacFishPositionShapefile.zip", 
+                    entityDescription = "A shp file containing the positons of fish studied in this dataset",
+                    entityType = "shp file",
+                    physical = physical)
+
+# Adding additional metadata with custom units ---------------------------------
 # TODO make a function to take care of cutom units
 custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day", "fishPerSchool"),
                            unitType = c("density", "temperature", "dimensionless", "density"),
-                           parentSI = c(NA, NA, NA, NA, NA),
-                           multiplierToSI = c(NA, NA, NA, NA, NA),
+                           parentSI = c(NA, NA, NA, NA),
+                           multiplierToSI = c(NA, NA, NA, NA),
                            description = c("Fish density in the enclosure, number of fish in total enclosure space", 
                                            "thermal unit of energy given off of fish",
                                            "count of number of days that go by",
@@ -165,6 +170,7 @@ custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day", "fi
 unitList <- set_unitList(custom_units)
 
 # Appending all to dataset list
+
 dataset <- list(title = title$title,
                 shortName = title$shortName,
                 creator = personnel$creator,
@@ -179,7 +185,8 @@ dataset <- list(title = title$title,
                 licensed = license$licensed,
                 methods = methods,
                 maintenance = maintenance$maintenance,
-                dataTable = data_tables)
+                dataTable = data_tables,
+                otherEntity = otherEntity)
 
 ## Making the EML document -----------------------------------------------------
 eml <- list(packageId = edi_number,

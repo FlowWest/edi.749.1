@@ -44,7 +44,7 @@
       <electronicMailAddress>rgreathouse@psmfc.org</electronicMailAddress>
       <role>other</role>
     </associatedParty>
-    <pubDate>2021-03-18</pubDate>
+    <pubDate>2021-03-22</pubDate>
     <abstract>
       <section>
         <title>Overview</title>
@@ -151,6 +151,7 @@
       <keyword>Salmonid Habitat Restoration Projects</keyword>
       <keyword>Effectiveness Monitoring</keyword>
       <keyword>Pacific Salmon</keyword>
+      <keyword>CVPIA</keyword>
     </keywordSet>
     <intellectualRights>
       <para>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on the website https://portal.edirepository.org (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.&amp;#13;</para>
@@ -260,37 +261,34 @@
     <methods>
       <methodStep>
         <description>
-          <section>
-            <title>Enclosure Study: Growth Rate Methods.</title>
-            <para>
-      Data was collected following methods described at the following
-      link:
+          <para>
+    Data was collected following methods described at
     </para>
-            <para>
-              <ulink>https://www.sacramentoriver.org/forum/publications/side_channels/Monitoring%20Plan%20(final)%20170831.pdf</ulink>
-            </para>
-            <para>
-      Monitoring efforts will generate data for the presented response
-      variables for the purpose of testing the hypotheses presented in
-      table 1 of the aforementioned document. Specific response variable
-      metrics are identified while methods reference field protocols
-      that are documented in Appendix A (Table A-1).
-    </para>
-            <para>
-      Note that the above referenced protocol includes additional types
-      of data collection. Enclosure study methods are identified and
-      clearly labeled throughout the document.
-    </para>
-            <para>
-      Caveats to using this data: Some enclosures lost fish due to
-      mortality or escape, and others did not. This resulted in
-      different densities between habitat types, and confounded habitat
-      type with density dependent effects on growth. Logistical
-      constraints prevented removal of all enclosures on the same day,
-      so the total time from start to finish was not identical between
-      habitat types.
-    </para>
-          </section>
+          <para>&lt;link xlink:href="https://www.sacramentoriver.org/forum/publications/side_channels/Monitoring%20Plan%20(final)%20170831.pdf"&gt;this
+    pdf&lt;/link&gt;</para>
+          <para>
+  </para>
+          <para>
+    Monitoring efforts will generate data for the presented response
+    variables for the purpose of test-ing the hypotheses presented in
+    table 1 of the aforementioned document. Specific response vari-able
+    metrics are identified while methods reference field protocols that
+    are documented in Ap-pendix A (Table A-1).
+  </para>
+          <para>
+    Note that the above referenced protocol includes additional types of
+    data collection. Enclosure study, microhabitat use, seining, and
+    snorkel study methods are identified and clearly labeled throughout
+    the document.
+  </para>
+          <para>
+    Caveats to using this data: Some enclosures lost fish due to
+    mortality or escape, and others did not. This resulted in different
+    densities between habitat types, and confounded habitat type with
+    density dependent effects on growth. Logistical constraints
+    prevented removal of all enclosures on the same day, so the total
+    time from start to finish was not identical between habitat types.
+  </para>
         </description>
       </methodStep>
     </methods>
@@ -316,8 +314,8 @@
       <entityDescription>Hannon Salmonid Dataset</entityDescription>
       <physical>
         <objectName>enclosure-study-growth-rate-data.csv</objectName>
-        <size unit="bytes">32636</size>
-        <authentication method="MD5">44b508c45e3635e8d65a719631530a75</authentication>
+        <size unit="bytes">32616</size>
+        <authentication method="MD5">02b90d65da8c77cffcb380dc778351da</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -588,8 +586,8 @@
       <entityDescription>Hannon Salmonid Dataset</entityDescription>
       <physical>
         <objectName>enclosure-study-gut-contents-data.csv</objectName>
-        <size unit="bytes">4899</size>
-        <authentication method="MD5">b72c72b6b1db5b82c163379f8ee5f9a3</authentication>
+        <size unit="bytes">4823</size>
+        <authentication method="MD5">b86a96d85d2de2c20e7077c2060be292</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -903,8 +901,8 @@
       <entityDescription>Hannon Salmonid Dataset</entityDescription>
       <physical>
         <objectName>microhabitat-use-data-2018-2020.csv</objectName>
-        <size unit="bytes">236501</size>
-        <authentication method="MD5">190ad516b84c82adb144347c06f5355b</authentication>
+        <size unit="bytes">229145</size>
+        <authentication method="MD5">5df83bf5e1fef4abcab736b54f214fc5</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1222,8 +1220,8 @@
       <entityDescription>Hannon Salmonid Dataset</entityDescription>
       <physical>
         <objectName>seining-weight-lengths-2018-2020.csv</objectName>
-        <size unit="bytes">319226</size>
-        <authentication method="MD5">bb14585f5e796ee9388ed8004f0db591</authentication>
+        <size unit="bytes">329621</size>
+        <authentication method="MD5">1ab83acb44df024f597d1ddce5e4695d</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1406,8 +1404,8 @@
       <entityDescription>Hannon Salmonid Dataset</entityDescription>
       <physical>
         <objectName>snorkel-index-data-2015-2020.csv</objectName>
-        <size unit="bytes">97953</size>
-        <authentication method="MD5">b4a83fa688379d6a74e70e6e458d2ea0</authentication>
+        <size unit="bytes">105881</size>
+        <authentication method="MD5">4b9d847d26ccbb9649fa135fbeb72ea5</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1866,6 +1864,31 @@
         </attribute>
       </attributeList>
     </dataTable>
+    <otherEntity>
+      <entityName>20200115SacFishPositionShapefile.zip</entityName>
+      <entityDescription>A shp file containing the positons of fish studied in this dataset</entityDescription>
+      <physical>
+        <objectName>20200115SacFishPositionsShapefile.zip</objectName>
+        <size unit="bytes">102586</size>
+        <authentication method="MD5">926d3ab41a35c38202efdbfa46174227</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download"/>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>shp file</entityType>
+    </otherEntity>
   </dataset>
   <additionalMetadata>
     <metadata>
@@ -1878,6 +1901,9 @@
         </unit>
         <unit id="day" name="day" unitType="dimensionless">
           <description>count of number of days that go by</description>
+        </unit>
+        <unit id="fishPerSchool" name="fishPerSchool" unitType="density">
+          <description>Number of fish counted per school</description>
         </unit>
       </unitList>
     </metadata>
