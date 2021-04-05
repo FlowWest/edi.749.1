@@ -34,8 +34,19 @@ dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Gut Contents/enclosure-study-gut-contents-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Microhabitat Use Data/microhabitat-use-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Seining Data/seining-weight-length-metadata.xlsx",
-                                                  "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"
-))
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"),
+                               description = c("Growth Rates - Enclosure Study",
+                                               "Gut Contents - Enclosure Study",
+                                               "Microhabitat Data",
+                                               "Seining Weight Lengths Data",
+                                               "Snorkel Survey Data"),
+                               github_url = c("https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-growth-rate-data.csv?token=AMGEQ7R4E5RMNKRMD57BBQTAOSW6W",
+                                              "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-gut-contents-data.csv?token=AMGEQ7VJADFEYARKPUM4AYTAOSXAQ",
+                                              "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/microhabitat-use-data-2018-2020.csv?token=AMGEQ7WQ3NCY62J75HI3BULAOSXB6",
+                                              "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/seining-weight-lengths-2018-2020.csv?token=AMGEQ7SOD4FLW2SOIZ373CDAOSXDQ",
+                                              "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/snorkel-index-data-2015-2020.csv?token=AMGEQ7SOHIYOGP3MDE2AB4DAOSXFI")
+
+)
 
 shp_file <- "data-raw/mandy-salmanid-habitat-monitoring/20200115SacFishPositionsShapefile.zip"
 
@@ -110,7 +121,8 @@ coverage <- add_coverage(list(),
 ### Add DataTable or SpatialRaster or SpatialVector ----------------------------
 #### Add data tables -----------------------------------------------------------
 # Create helper function to add code definitions if domain is "enumerated"
-adds_datatable <- function(datatable, datatable_name, attribute_info, dataset_methods = NULL, additional_info = NULL){
+adds_datatable <- function(datatable, datatable_name, description, attribute_info, github_url,
+                           dataset_methods = NULL, additional_info = NULL){
   attribute_table <- readxl::read_xlsx(attribute_info, sheet = "attribute")
   codes <- readxl::read_xlsx(attribute_info, sheet = "code_definitions")
   attribute_list <- list()
@@ -133,19 +145,20 @@ adds_datatable <- function(datatable, datatable_name, attribute_info, dataset_me
       definition = attribute_definition
     }
     new_attribute <- EMLaide::add_attribute(attribute_name = attribute_name, attribute_definition = attribute_definition,
-                                             storage_type = storage_type, measurement_scale = measurement_scale,
-                                             domain = domain, definition = definition, type = type, units = units,
-                                             unit_precision = NULL, number_type = number_type,
-                                             date_time_format = date_time_format, date_time_precision = date_time_precision,
-                                             minimum = minimum, maximum = maximum, attribute_label = attribute_label)
+                                            storage_type = storage_type, measurement_scale = measurement_scale,
+                                            domain = domain, definition = definition, type = type, units = units,
+                                            unit_precision = NULL, number_type = number_type,
+                                            date_time_format = date_time_format, date_time_precision = date_time_precision,
+                                            minimum = minimum, maximum = maximum, attribute_label = attribute_label)
   }
   attribute_list$attribute <- purrr::pmap(attribute_table, attributes_and_codes) %>% na.omit()
   
-  physical <- add_physical(file_path = datatable)
+  physical <- add_physical(file_path = datatable, data_url = github_url)
   dataTable <- list(entityName = datatable_name,
-                    entityDescription = metadata$dataset$name,
+                    entityDescription = description,
                     physical = physical,
-                    attributeList = attribute_list)
+                    attributeList = attribute_list,
+                    numberOfRecords = nrow(read_csv(datatable)))
 }
 data_tables <- purrr::pmap(dataset_files, adds_datatable)
 
@@ -199,5 +212,6 @@ eml <- list(packageId = edi_number,
 file_name <- paste(edi_number, "xml", sep = ".")
 EML::write_eml(eml, file_name)
 EML::eml_validate(file_name)
+
 
 

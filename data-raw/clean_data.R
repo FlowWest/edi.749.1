@@ -15,10 +15,12 @@ microhabitat_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Micr
   mutate(date = as.Date(date)) %>%
   glimpse()
 write_csv(microhabitat_data, "data/microhabitat-use-data-2018-2020.csv")
+
 seining_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Seining Data/seining-weight-lengths-2018-2020.xlsx") %>%
   mutate(date = as.Date(date)) %>%
   glimpse()
 write_csv(seining_data, "data/seining-weight-lengths-2018-2020.csv")
+
 snorkel_index_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-data-2015-2020.xlsx") %>%
   mutate(date = as.Date(date), time = strftime(time, format = "%H:%M:%S")) %>%
   glimpse()

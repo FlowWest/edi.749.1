@@ -44,7 +44,7 @@
       <electronicMailAddress>rgreathouse@psmfc.org</electronicMailAddress>
       <role>other</role>
     </associatedParty>
-    <pubDate>2021-03-22</pubDate>
+    <pubDate>2021-04-05</pubDate>
     <abstract>
       <section>
         <title>Overview</title>
@@ -80,11 +80,9 @@
       planned. Six enclosures with juvenile Fall Run Chinook salmon from
       Coleman National Fish Hatchery were placed in each habitat type.
       Enclosures remained in the river for approximately 6.5 weeks.  At
-      the end of the study, fish were 
-    </para>
-        <para>
-      euthanized, and we dissected their guts and enumerated the taxa
-      found. Annual reports summarize the survey findings.
+      the end of the study, fish were euthanized, and we dissected their
+      guts and enumerated the taxa found. Annual reports summarize the
+      survey findings.
     </para>
       </section>
       <section>
@@ -304,14 +302,15 @@
         <role>Project Lead</role>
       </personnel>
       <award>
-        <funderName>Bureau of Reclamation</funderName>
-        <funderIdentifier>TBD</funderIdentifier>
+        <funderName>United States Bureau of Reclamation</funderName>
+        <funderIdentifier>https://www.wikidata.org/wiki/Q1010548</funderIdentifier>
+        <awardNumber>R14AC00096</awardNumber>
         <title>Salmonid Spawning and Rearing Habitat Restoration in the Sacramento River</title>
       </award>
     </project>
     <dataTable>
       <entityName>enclosure-study-growth-rate-data.csv</entityName>
-      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <entityDescription>Growth Rates - Enclosure Study</entityDescription>
       <physical>
         <objectName>enclosure-study-growth-rate-data.csv</objectName>
         <size unit="bytes">32616</size>
@@ -328,7 +327,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download"/>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-growth-rate-data.csv?token=AMGEQ7R4E5RMNKRMD57BBQTAOSW6W</url>
           </online>
         </distribution>
       </physical>
@@ -580,10 +579,11 @@
           </measurementScale>
         </attribute>
       </attributeList>
+      <numberOfRecords>353</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>enclosure-study-gut-contents-data.csv</entityName>
-      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <entityDescription>Gut Contents - Enclosure Study</entityDescription>
       <physical>
         <objectName>enclosure-study-gut-contents-data.csv</objectName>
         <size unit="bytes">4823</size>
@@ -600,7 +600,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download"/>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-gut-contents-data.csv?token=AMGEQ7VJADFEYARKPUM4AYTAOSXAQ</url>
           </online>
         </distribution>
       </physical>
@@ -895,10 +895,11 @@
           </measurementScale>
         </attribute>
       </attributeList>
+      <numberOfRecords>72</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>microhabitat-use-data-2018-2020.csv</entityName>
-      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <entityDescription>Microhabitat Data</entityDescription>
       <physical>
         <objectName>microhabitat-use-data-2018-2020.csv</objectName>
         <size unit="bytes">229145</size>
@@ -915,7 +916,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download"/>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/microhabitat-use-data-2018-2020.csv?token=AMGEQ7WQ3NCY62J75HI3BULAOSXB6</url>
           </online>
         </distribution>
       </physical>
@@ -1214,10 +1215,11 @@
           </measurementScale>
         </attribute>
       </attributeList>
+      <numberOfRecords>1680</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>seining-weight-lengths-2018-2020.csv</entityName>
-      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <entityDescription>Seining Weight Lengths Data</entityDescription>
       <physical>
         <objectName>seining-weight-lengths-2018-2020.csv</objectName>
         <size unit="bytes">329621</size>
@@ -1234,7 +1236,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download"/>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/seining-weight-lengths-2018-2020.csv?token=AMGEQ7SOD4FLW2SOIZ373CDAOSXDQ</url>
           </online>
         </distribution>
       </physical>
@@ -1398,10 +1400,11 @@
           </measurementScale>
         </attribute>
       </attributeList>
+      <numberOfRecords>3809</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>snorkel-index-data-2015-2020.csv</entityName>
-      <entityDescription>Hannon Salmonid Dataset</entityDescription>
+      <entityDescription>Snorkel Survey Data</entityDescription>
       <physical>
         <objectName>snorkel-index-data-2015-2020.csv</objectName>
         <size unit="bytes">105881</size>
@@ -1418,7 +1421,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download"/>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/snorkel-index-data-2015-2020.csv?token=AMGEQ7SOHIYOGP3MDE2AB4DAOSXFI</url>
           </online>
         </distribution>
       </physical>
@@ -1863,6 +1866,7 @@
           </measurementScale>
         </attribute>
       </attributeList>
+      <numberOfRecords>724</numberOfRecords>
     </dataTable>
     <otherEntity>
       <entityName>20200115SacFishPositionShapefile.zip</entityName>
