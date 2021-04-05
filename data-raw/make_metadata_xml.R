@@ -34,12 +34,14 @@ dataset_files <- dplyr::tibble(datatable =  c("data/enclosure-study-growth-rate-
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Gut Contents/enclosure-study-gut-contents-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Microhabitat Use Data/microhabitat-use-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Seining Data/seining-weight-length-metadata.xlsx",
-                                                  "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"),
+                                                  "data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-metadata.xlsx"
+                                                  ),
                                description = c("Growth Rates - Enclosure Study",
                                                "Gut Contents - Enclosure Study",
                                                "Microhabitat Data",
                                                "Seining Weight Lengths Data",
-                                               "Snorkel Survey Data"),
+                                               "Snorkel Survey Data"
+                                               ),
                                github_url = c("https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-growth-rate-data.csv?token=AMGEQ7R4E5RMNKRMD57BBQTAOSW6W",
                                               "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/enclosure-study-gut-contents-data.csv?token=AMGEQ7VJADFEYARKPUM4AYTAOSXAQ",
                                               "https://raw.githubusercontent.com/FlowWest/CVPIA_Salmonid_Habitat_Monitoring/make-xml/data/microhabitat-use-data-2018-2020.csv?token=AMGEQ7WQ3NCY62J75HI3BULAOSXB6",
