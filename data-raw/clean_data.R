@@ -12,7 +12,9 @@ enclosure_gut_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Enc
 write_csv(enclosure_gut_data, "data/enclosure-study-gut-contents-data.csv")
 
 microhabitat_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Microhabitat Use Data/microhabitat-use-data-2018-2020.xlsx") %>% 
-  mutate(date = as.Date(date)) %>%
+  mutate(date = as.Date(date),
+         comments = str_remove_all(comments, ","),
+         cover_type = str_replace_all(cover_type, ",", " -")) %>%
   glimpse()
 write_csv(microhabitat_data, "data/microhabitat-use-data-2018-2020.csv")
 
@@ -22,6 +24,8 @@ seining_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Seining D
 write_csv(seining_data, "data/seining-weight-lengths-2018-2020.csv")
 
 snorkel_index_data <- read_excel("data-raw/mandy-salmanid-habitat-monitoring/Snorkel Index Data/snorkel-index-data-2015-2020.xlsx") %>%
-  mutate(date = as.Date(date), time = strftime(time, format = "%H:%M:%S")) %>%
+  mutate(date = as.Date(date), time = strftime(time, format = "%H:%M:%S"),
+         comments = str_remove_all(comments, ",")) %>%
   glimpse()
 write_csv(snorkel_index_data, "data/snorkel-index-data-2015-2020.csv")
+

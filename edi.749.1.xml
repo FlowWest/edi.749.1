@@ -44,7 +44,7 @@
       <electronicMailAddress>rgreathouse@psmfc.org</electronicMailAddress>
       <role>other</role>
     </associatedParty>
-    <pubDate>2021-04-05</pubDate>
+    <pubDate>2021-04-09</pubDate>
     <abstract>
       <section>
         <title>Overview</title>
@@ -313,8 +313,8 @@
       <entityDescription>Growth Rates - Enclosure Study</entityDescription>
       <physical>
         <objectName>enclosure-study-growth-rate-data.csv</objectName>
-        <size unit="bytes">32616</size>
-        <authentication method="MD5">02b90d65da8c77cffcb380dc778351da</authentication>
+        <size unit="bytes">32636</size>
+        <authentication method="MD5">44b508c45e3635e8d65a719631530a75</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -586,8 +586,8 @@
       <entityDescription>Gut Contents - Enclosure Study</entityDescription>
       <physical>
         <objectName>enclosure-study-gut-contents-data.csv</objectName>
-        <size unit="bytes">4823</size>
-        <authentication method="MD5">b86a96d85d2de2c20e7077c2060be292</authentication>
+        <size unit="bytes">4899</size>
+        <authentication method="MD5">b72c72b6b1db5b82c163379f8ee5f9a3</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -902,8 +902,8 @@
       <entityDescription>Microhabitat Data</entityDescription>
       <physical>
         <objectName>microhabitat-use-data-2018-2020.csv</objectName>
-        <size unit="bytes">229145</size>
-        <authentication method="MD5">5df83bf5e1fef4abcab736b54f214fc5</authentication>
+        <size unit="bytes">225522</size>
+        <authentication method="MD5">24943485670c8312d6e6e8ea1892316c</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1222,8 +1222,8 @@
       <entityDescription>Seining Weight Lengths Data</entityDescription>
       <physical>
         <objectName>seining-weight-lengths-2018-2020.csv</objectName>
-        <size unit="bytes">329621</size>
-        <authentication method="MD5">1ab83acb44df024f597d1ddce5e4695d</authentication>
+        <size unit="bytes">320320</size>
+        <authentication method="MD5">0e3a41cddd740c52df329702d42ead80</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1407,8 +1407,8 @@
       <entityDescription>Snorkel Survey Data</entityDescription>
       <physical>
         <objectName>snorkel-index-data-2015-2020.csv</objectName>
-        <size unit="bytes">105881</size>
-        <authentication method="MD5">4b9d847d26ccbb9649fa135fbeb72ea5</authentication>
+        <size unit="bytes">99672</size>
+        <authentication method="MD5">2b0b5eebd011a08c59a5d4a9d078e76d</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1716,6 +1716,25 @@
                 </enumeratedDomain>
               </nonNumericDomain>
             </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>wr_count</attributeName>
+          <attributeDefinition>winter run counted</attributeDefinition>
+          <storageType>dbl</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">100000000</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
           </measurementScale>
         </attribute>
         <attribute>
