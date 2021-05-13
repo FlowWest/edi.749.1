@@ -15,12 +15,12 @@ names(metadata) <- sheets
 abstract_docx <- "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-abstract.docx"
 methods_docx <- "data-raw/mandy-salmanid-habitat-monitoring/methods.md"
 
-# dO ALL DATASETS
-datatable_metadata <- dplyr::tibble(filename = c("enclosure-study-growth-rate-data.csv",
-                                             "enclosure-study-gut-contents-data.csv",
-                                             "microhabitat-use-data-2018-2020.csv",
-                                             "seining-weight-lengths-2018-2020.csv",
-                                             "snorkel-index-data-2015-2020.csv"),  
+# Add all datatables and associated metadata in a datatable_metadata tibble to be used by the add_datatable() function
+datatable_metadata <- dplyr::tibble(filepath = c("data/enclosure-study-growth-rate-data.csv",
+                                             "data/enclosure-study-gut-contents-data.csv",
+                                             "data/microhabitat-use-data-2018-2020.csv",
+                                             "data/seining-weight-lengths-2018-2020.csv",
+                                             "data/snorkel-index-data-2015-2020.csv"),  
                                attribute_info = c("data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Gut Contents/enclosure-study-gut-contents-metadata.xlsx",
                                                   "data-raw/mandy-salmanid-habitat-monitoring/Microhabitat Use Data/microhabitat-use-metadata.xlsx",
@@ -39,8 +39,7 @@ datatable_metadata <- dplyr::tibble(filename = c("enclosure-study-growth-rate-da
                                
 )
 
-# Create dataset list 
-
+# Create dataset list and pipe on metadata elements 
 dataset <- list() %>% 
   add_pub_date() %>% 
   add_title(metadata$title) %>%
@@ -50,10 +49,11 @@ dataset <- list() %>%
   add_license(metadata$license) %>%
   add_method(methods_docx) %>%
   add_maintenance(metadata$maintenance) %>%
-  add_project(metadata$title, metadata$personnel, metadata$funding) %>%
+  add_project(metadata$funding) %>%
   add_coverage(metadata$coverage, metadata$taxonomic_coverage) %>%
-  add_data_table(datatable_metadata)
+  add_datatable(datatable_metadata)
 
+# Create custom units to add to the additional metadata section of EML 
 custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day", "fishPerSchool"),
                            unitType = c("density", "temperature", "dimensionless", "density"),
                            parentSI = c(NA, NA, NA, NA),
@@ -65,14 +65,14 @@ custom_units <- data.frame(id = c("fishPerEnclosure", "thermal unit", "day", "fi
 
 unitList <- EML::set_unitList(custom_units)
 
+# Add dataset and additiobal elements of eml to eml list 
 eml <- list(packageId = "edi.749.1",
             system = "EDI",
             access = add_access(),
             dataset = dataset,
-            additionalMetadata = list(metadata = list(
-              unitList = unitList)))
+            additionalMetadata = list(metadata = list(unitList = unitList)))
 
+# Write and validate EML 
+EML::write_eml(eml, "edi.749.1.xml")
+EML::eml_validate("edi.749.1.xml")
 
-file_name <- paste("edi.749.1", "xml", sep = ".")
-EML::write_eml(eml, file_name)
-EML::eml_validate(file_name)
