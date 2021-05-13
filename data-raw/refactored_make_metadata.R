@@ -4,9 +4,7 @@ library(EDIutils)
 library(readxl)
 library(EML)
 
-# save cleaned data to `data/`
-#-------------------------------------------------------------------------------
-# files and parameters to enter directly into the R script
+# load files to input into emlaide add element funcitons 
 excel_path <- "data-raw/mandy-salmanid-habitat-monitoring/Enclosure Study - Growth Rates/enclosure-study-growth-rates-metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
 metadata <- lapply(sheets, function(x) readxl::read_excel(excel_path, sheet = x))
